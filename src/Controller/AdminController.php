@@ -1,13 +1,13 @@
 <?php
 
-namespace Akademiano\App\Controller;
+namespace Sites\Reception\Controller;
 
-use Acl\Model\Parts\AclController;
+use Akademiano\Acl\AccessCheckIncludeTrait;
 use Akademiano\Core\ApplicationController;
 
 class AdminController extends ApplicationController
 {
-    use AclController;
+    use AccessCheckIncludeTrait;
 
     public function indexAction()
     {

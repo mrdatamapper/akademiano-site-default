@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Sites\_Default;
+namespace Sites\Reception;
 
 
 class Site extends \Akademiano\Sites\Site

@@ -1,0 +1,113 @@
+{% extends "layout.twig" %}
+
+{% block page %}
+<section class="section">
+    <div class="container">
+    <div class="row">
+        <div class="col-12 col-lx-9">
+            <div class="card  card-accent-{{ item ? "warning" : "success" }}">
+                <div class="card-header">
+                    {{ item ? "Редактирование" : "Добавление" }} Встречи {{ item ? "№ #{item.id.hex}" }}
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info" role="alert">Первоначальный прием (запись на повторный будет открыта позже)!</div>
+                    <form action="{{ url(meeting_save_to_user) }}" method="POST" enctype="multipart/form-data">
+                        <input name="meetingOwner" type="hidden" value="{{ meetingOwner.id.int }}"/>
+
+                        <div class="card-block">
+{#                            <div class="form-group">#}
+{#                                <label class="form-control-label" for="title">Название</label>#}
+{#                                <input type="text" class="form-control" id="title" name="title"#}
+{#                                       value="{{ item.title }}">#}
+{#                            </div>#}
+{#                            <div class="form-group">#}
+{#                                <label for="description">Описание</label>#}
+{#                                <textarea class="form-control" id="description" name="description"#}
+{#                                          rows="3">{{ item.description }}</textarea>#}
+{#                            </div>#}
+                            <div class="form-group">
+                                <label class="form-control-label">Ваш Специалист:</label>
+                                <input type="text" disabled class="form-control" id="meetingOwner-old" name="meetingOwner-old" value="{{ meetingOwner.title }}">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-control-label">Ваш тип приема</label>
+                                <select class="form-control" id="type" name="type">
+                                        <option value="{{ type.id.int }}" {{ item.type.id.int == type.id.int  ? 'selected="selected"' : '' }} >{{ type.title }}</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-9">
+
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-control-label">Выберите удобное время из предложенного (календарь в разработке)</label>
+                                <div>
+                                Возможные варианты:
+                                    <div>
+                                    {% for day, date in dates %}
+                                        <p><b>{{ day }}:</b></p>
+                                        <ul>
+                                        {% for time in date %}
+                                            <li>{{ time.start }} - {{ time.end }}</li>
+                                        {% endfor %}
+                                        </ul>
+                                    {% endfor %}
+                                    </div>
+                                </div>
+
+                                <input class="form-control" id="dateTimeStart" type="datetime-local" name="dateTimeStart" value="{{ item.dateTimeStart | default('now') | date('Y-m-d H:i') }}">
+                                <span class="help-block">Please enter a valid date</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="content">Пожалуйста опишите свою проблему</label>
+                                <textarea class="form-control ckeditor" id="content" name="content"
+                                          rows=10">{{ item.content |raw }}</textarea>
+                            </div>
+
+
+                            {% if item %}
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <table class="table table-sm table-responsive table-active">
+                                            <thead>
+                                            <tr>
+                                                <th>Создано</th>
+                                                <th>Изменено</th>
+                                            </tr>
+
+                                            </thead>
+
+                                            <tbody>
+                                            <tr>
+                                                <td>{{ item.created | date ("d.m.Y") }}</td>
+                                                <td>{{ item.changed| date ("d.m.Y") }}</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            {% endif %}
+
+
+                            <div class="form-group">
+                                <a href="{{ url('root') }}" role="button" class="btn btn-outline-primary">Отмена</a>
+                                &nbsp;
+                                &nbsp;
+                                <button type="submit" class="btn btn-success">Сохранить</button>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock page %}
+

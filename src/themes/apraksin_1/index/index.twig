@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="{{ html.lang|default("ru") }}" class="h-100">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {{ asset_css([
+        ["font-awesome/css/fontawesome.min.css", {"class":"holderjs"}],
+        ["font-awesome/css/all.min.css", {"class":"holderjs"}],
+        "simple-line-icons/css/simple-line-icons.css",
+        "bootstrap/dist/css/bootstrap.min.css",
+        "coreui/dist/css/coreui.min.css",
+        "assets/css/apraksin_1.css"
+    ], default, true) }}
+
+
+    {% block css %}
+    {% endblock css %}
+
+    {# counters #}
+
+    <title>{{ pageTitle | default('2dent.tech') }}</title>
+    {% if pageDescription %}
+        {# <meta name="description" content="{{ pageDescription }}"/> #}
+    {% endif %}
+</head>
+
+
+
+{% block body %}
+    <body class="d-flex flex-column h-100">
+
+    <main role="main" class="flex-shrink-0 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-5 col-md-3 text-center">
+                    <img src="/images/logo-1.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-xs-7 col-md-9 text-center my-auto mx-auto">
+                    <h1>Запись на прием</h1>
+                    <div class="row">
+                        <div class="col-md-7 text-xs-center text-md-right">
+                            <p>Выберите специалиста:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-md-5">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col text-right index-block-info-person ">
+                                    <h2>Дмитрий Александрович <strong>Апраксин</strong></h2>
+                                    <ul>
+                                        <li>врач-стоматолог-терапевт</li>
+                                        <li>трехкратный призер чемпионата по реставрации зубов</li>
+                                        <li>отличник стоматологии СтАр</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row index-button-add-meeting d-none d-lg-block text-right mb-3">
+                                <div class="col">
+                                    <a href="/meetings/meet-with-user/10ca243728881403/add" class="btn btn-primary btn-lg">Записаться на прием</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col text-right">
+                            <img src="/images/apraksin-photo-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row d-sm-block d-lg-none text-right mt-3">
+                        <div class="col">
+                            <a href="/meetings/meet-with-user/10ca243728881403/add" class="btn btn-primary btn-lg">Записаться на прием</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col text-right index-block-info-person">
+                                    <h2>Артем Константинович <strong>Симонов</strong></h2>
+                                    <ul>
+                                        <li>врач-стоматолог-ортопед</li>
+                                        <li>высшей квалификационной категирии</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row index-button-add-meeting d-none d-lg-block text-right mb-3">
+                                <div class="col">
+                                    <a href="/meetings/meet-with-user/10ca4b0c8b081404/add" class="btn btn-primary btn-lg">Записаться на прием</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col text-right">
+                            <img src="/images/simonov-photo-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row d-sm-block d-lg-none text-right mt-3">
+                        <div class="col">
+                            <a href="/meetings/meet-with-user/10ca4b0c8b081404/add" class="btn btn-primary btn-lg">Записаться на прием</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <div id="overlay-map"></div>
+
+    <div id="map">
+        <div id="map-close">×</div>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A88d031d57ab2bd3cab6918dad762bca6bcf08a104dc3650c47c0eee18bfd6ab0&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col text-left">
+                    © 2020 2dent.tech - Запись на приём | Все права защищены.
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-right">
+                    Мы принимаем по адресу: г.Иркутск, проспект Маршала Жукова, 15/5 (<a id="show-map" href="javascript:void(0)">смотреть на карте</a>)
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    {{ asset_js([
+        "jquery/dist/jquery.min.js",
+        "popper.js/dist/umd/popper.min.js",
+        "bootstrap/dist/js/bootstrap.min.js",
+        "perfect-scrollbar/dist/perfect-scrollbar.min.js",
+
+        "font-awesome/js/fontawesome.min.js",
+        "font-awesome/js/solid.min.js",
+
+        "holder/holder.min.js",
+        "tether/dist/js/tether.min.js",
+        "pace/pace.min.js",
+        "assets/js/apraksin_1.js",
+    ], default, true) }}
+
+
+    {% block js %}
+
+    {% endblock js %}
+
+
+    </body>
+{% endblock body %}
+
+</html>

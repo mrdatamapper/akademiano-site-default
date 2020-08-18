@@ -4,8 +4,7 @@ data
 public/data
 public/assets
 
+tests/_support/_generated
 tests/_output/*
 
 composer.lock
-
-tests/_output/*

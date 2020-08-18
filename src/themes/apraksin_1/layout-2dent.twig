@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="{{ html.lang|default("ru") }}" class="h-100">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {{ asset_css([
+        ["font-awesome/css/fontawesome.min.css", {"class":"holderjs"}],
+        ["font-awesome/css/all.min.css", {"class":"holderjs"}],
+        "simple-line-icons/css/simple-line-icons.css",
+        "bootstrap/dist/css/bootstrap.min.css",
+        "coreui/dist/css/coreui.min.css",
+        "assets/css/apraksin_1.css"
+    ], default, true) }}
+
+
+    {% block css %}
+    {% endblock css %}
+
+    {# counters #}
+
+    <title>{{ pageTitle | default('2dent.tech') }}</title>
+    {% if pageDescription %}
+        {# <meta name="description" content="{{ pageDescription }}"/> #}
+    {% endif %}
+</head>
+
+
+{% block body %}
+    <body class="d-flex flex-column h-100">
+
+    {% block main %}
+    {% endblock main %}
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col text-left">
+                    © 2020 2dent.tech - Запись на приём | Все права защищены.
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-right">
+                    Мы принимаем по адресу: г.Иркутск, проспект Маршала Жукова, 15/5 (<a id="show-map" href="javascript:void(0)">смотреть на карте</a>)
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {{ asset_js([
+        "jquery/dist/jquery.min.js",
+        "popper.js/dist/umd/popper.min.js",
+        "bootstrap/dist/js/bootstrap.min.js",
+        "perfect-scrollbar/dist/perfect-scrollbar.min.js",
+
+        "font-awesome/js/fontawesome.min.js",
+        "font-awesome/js/solid.min.js",
+
+        "holder/holder.min.js",
+        "tether/dist/js/tether.min.js",
+        "pace/pace.min.js",
+        "assets/js/apraksin_1.js",
+    ], default, true) }}
+
+    {% block js %}
+    {% endblock js %}
+
+    </body>
+{% endblock body %}
+</html>

@@ -1,0 +1,59 @@
+{% extends "layout.twig" %}
+
+{% block breadcrumb %}
+    <section class="breadcrumbs-custom">
+        <div class="breadcrumbs-custom-main context-dark">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-9">
+                        <h3 class="breadcrumbs-custom-title">Профиль пользователя</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumbs-custom-aside">
+            <div class="container">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+{% endblock breadcrumb %}
+
+{% block mainContainerContent %}
+    <div class="row justify-content-sm-center">
+        <div class="col-sm-10 col-md-5">
+            <!-- Member block type 5-->
+            <div class="member-block-type-5 inset-lg-right-20"><img class="img-fluid d-block mx-auto" src="/assets/businet_free/images/userpic.jpg" alt="" width="437" height="437">
+                <div class="member-block-body">
+                    {# <a class="btn btn-block btn-primary" href="contact-me.html">get in touch</a> #}
+                    <div class="offset-top-34">
+                        <ul class="list-inline list-inline-xs">
+                            <li class="list-inline-item"><a class="icon novi-icon icon-xxs icon-circle icon-darker-filled fa-facebook" href="#"></a></li>
+                            <li class="list-inline-item"><a class="icon novi-icon icon-xxs icon-circle icon-darker-filled fa-twitter" href="#"></a></li>
+                            <li class="list-inline-item"><a class="icon novi-icon icon-xxs icon-circle icon-darker-filled fa-google-plus" href="#"></a></li>
+                            <li class="list-inline-item"><a class="icon novi-icon icon-xxs icon-circle icon-darker-filled fa-linkedin" href="#"></a></li>
+                        </ul>
+                    </div>
+                    <address class="contact-info offset-top-20 offset-md-top-34">
+                        <ul class="list-unstyled p">
+                            <li><span class="icon novi-icon icon-xxs text-middle text-dark mdi mdi-phone"></span><a class="text-middle d-inline-block" href="tel:1-800-1234-567">1-800-1234-567</a></li>
+                            <li><span class="icon novi-icon icon-xxs text-middle text-dark mdi mdi-email-open"></span><a class="text-middle d-inline-block text-picton-blue" href="mailto:info@demolink.org">info@demolink.org</a></li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-7 text-md-left">
+            <div>
+                <h1>{{ user.title }}</h1>
+            </div>
+            {% if isSelf %}
+                <p class="small text-darker offset-top-4">{{ user.group.title }}</p>
+                <p class="small text-darker offset-top-4">{{ user.email }}</p>
+            {% endif %}
+
+        </div>
+    </div>
+{% endblock mainContainerContent %}

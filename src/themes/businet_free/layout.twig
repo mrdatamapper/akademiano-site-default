@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="{{ html.lang|default("ru") }}">
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/assets/businet_free/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CMuli:100,300,400,600,800">
+    <link rel="stylesheet" href="/assets/businet_free/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/businet_free/css/fonts.css">
+    <link rel="stylesheet" href="/assets/businet_free/css/style.css">
+    <style>.ie-panel {
+            display: none;
+            background: #212121;
+            padding: 10px 0;
+            box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+            clear: both;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
+            display: block;
+        }</style>
+
+    <title>{{ pageTitle | default('Datamapper Site') }}</title>
+    {% if pageDescription %}
+        <meta name="description" content="{{ pageDescription }}"/>
+    {% endif %}
+
+    {% block css %}
+    {% endblock css %}
+
+</head>
+
+{% block body %}
+    <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="/assets/businet_free/images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader" id="loading">
+        <div class="preloader-body">
+            <div id="loading-center-object">
+                <div class="object" id="object_four"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_one"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page">
+        {% block page %}
+        <!-- Page Header-->
+        <header class="section page-header">
+            <!-- RD Navbar-->
+            <div class="rd-navbar-wrap">
+                <nav class="rd-navbar rd-navbar-modern" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="10px" data-xl-stick-up-offset="10px"
+                     data-xxl-stick-up-offset="10px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+                    <div class="rd-navbar-main">
+                        <!-- RD Navbar Panel-->
+                        <div class="rd-navbar-panel">
+                            <!-- RD Navbar Toggle-->
+                            <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                            <!-- RD Navbar Brand-->
+                            <div class="rd-navbar-brand">
+                                {#                            <a class="brand" href="index.html"><img src="/assets/businet_free/images/logo-default-297x63.png" alt="" width="148" height="31"/></a>#}
+                                <a class="brand" href="/">
+                                <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" height="148.36796875" width="263.28125">
+                                    <defs id="SvgjsDefs1014"></defs>
+                                    <g id="SvgjsG1015" rel="mainfill" name="main_text" xmlns:name="main_text" transform="translate(-0.8203125,-91.63203125000001)" fill="#046380">
+                                        <path d="M20.86 217.05L20.86 219.96L0.82 234.26L0.82 240L26.56 240L26.56 234.26L10.57 234.26L26.56 222.83L26.56 214.22L23.73 211.31L3.65 211.31L0.82 214.22L0.82 219.92L6.56 219.92L6.56 217.05ZM55.57 219.92L47.01 211.31L29.84 211.31L29.84 240L52.75 240L55.57 237.17ZM49.88 234.26L35.57 234.26L35.57 217.05L44.14 217.05L49.88 222.79ZM83.61 240L83.61 234.26L65.00 234.26L65.00 228.57L82.17 228.57L82.17 222.83L65.00 222.83L65.00 217.05L83.61 217.05L83.61 211.31L59.26 211.31L59.26 240ZM113.03 240L113.03 211.31L107.34 211.31L107.34 230.41L93.03 211.31L87.30 211.31L87.30 240L93.03 240L93.03 220.86L107.34 240ZM131.68 240L131.68 217.05L141.64 217.05L141.64 211.31L115.90 211.31L115.90 217.05L125.94 217.05L125.94 240ZM144.10 240L149.84 240L149.84 234.26L144.10 234.26ZM168.07 240L168.07 217.05L178.03 217.05L178.03 211.31L152.30 211.31L152.30 217.05L162.34 217.05L162.34 240ZM205.25 240L205.25 234.26L186.64 234.26L186.64 228.57L203.81 228.57L203.81 222.83L186.64 222.83L186.64 217.05L205.25 217.05L205.25 211.31L180.90 211.31L180.90 240ZM231.84 240L234.67 237.17L234.67 231.43L228.98 231.43L228.98 234.26L214.67 234.26L214.67 217.05L228.98 217.05L228.98 219.92L234.67 219.92L234.67 214.22L231.84 211.31L211.76 211.31L208.93 214.22L208.93 237.17L211.76 240ZM244.10 240L244.10 228.57L258.40 228.57L258.40 240L264.10 240L264.10 211.31L258.40 211.31L258.40 222.83L244.10 222.83L244.10 211.31L238.36 211.31L238.36 240Z"
+                                              fill="#046380" style="fill: rgb(4, 99, 128);"></path>
+                                    </g>
+                                    <g id="SvgjsG1016" rel="mainfill" name="symbol" xmlns:name="symbol_mainfill" transform="translate(77.04296875000001,-1.851562500000007) scale(1.2)" fill="#046380">
+                                        <g fill="#046380">
+                                            <path d="M80.732,40.794c-0.103-5.379-2.645-9.408-6.174-11.725c-3.516-2.344-7.841-3.202-11.969-3.209   c-3.467,0.006-6.805,0.612-9.538,1.675c-2.734-1.065-6.073-1.668-9.542-1.675c-4.125,0.007-8.451,0.865-11.967,3.209   c-3.53,2.316-6.074,6.346-6.176,11.725v0.022c-0.007,0.331-0.01,0.667-0.014,1.014c-0.045,6.611,1.914,10.183,3.581,13.074   c1.617,2.934,2.987,5.241,3.032,11.503c0.008,8.498,1.386,13.913,3.428,17.402c2.008,3.464,4.865,4.966,7.268,4.966h0.043   c0.674,0,1.304-0.106,1.893-0.322c0.9-0.325,1.583-1.021,1.967-1.698c0.394-0.688,0.595-1.385,0.74-2.104   c0.28-1.438,0.327-3.031,0.372-4.796c0.075-3.511,0.12-7.655,1.18-11.166c0.445-1.507,0.991-3.104,1.714-4.175   c0.736-1.042,1.343-1.531,2.48-1.659c1.137,0.128,1.741,0.617,2.479,1.659c0.721,1.07,1.268,2.668,1.712,4.175   c1.41,4.63,0.999,10.258,1.324,14.276c0.135,1.365,0.294,2.583,0.97,3.79c0.384,0.678,1.065,1.373,1.981,1.702   c0.571,0.207,1.204,0.318,1.878,0.318c2.412,0.017,5.292-1.481,7.313-4.966c2.04-3.489,3.415-8.904,3.425-17.402   c0.046-6.262,1.415-8.569,3.033-11.503c1.664-2.888,3.632-6.463,3.582-13.074C80.748,41.486,80.741,41.141,80.732,40.794z    M73.468,52.818c-1.693,2.935-3.629,6.661-3.584,13.589c0.009,8.041-1.354,12.753-2.838,15.247   c-1.503,2.504-2.928,2.856-3.651,2.874c-0.091,0-0.172-0.008-0.241-0.018c-0.054-0.131-0.134-0.368-0.191-0.688   c-0.184-0.887-0.256-2.353-0.294-4.07c-0.091-3.455-0.071-7.965-1.358-12.282c-0.476-1.57-1.069-3.529-2.243-5.309   c-1.129-1.769-3.157-3.423-5.887-3.56l-0.131-0.006l-0.128,0.006c-2.73,0.137-4.759,1.791-5.887,3.56   c-1.173,1.779-1.767,3.738-2.244,5.309c-1.683,5.671-1.158,11.771-1.492,15.172c-0.067,0.92-0.243,1.607-0.351,1.869   c-0.068,0.01-0.15,0.018-0.242,0.018c-0.721-0.018-2.15-0.37-3.652-2.874c-1.482-2.497-2.846-7.206-2.836-15.247   c0.045-6.924-1.893-10.654-3.581-13.587c-1.641-2.973-2.985-5.094-3.034-10.99c0-0.284,0.006-0.592,0.012-0.924   c0.149-4.175,1.79-6.581,4.293-8.307c1.908-1.291,4.415-2.058,7.053-2.352l4.456-0.059c2.587,0.2,5.019,0.789,6.761,1.582   l0.875,0.394l0.871-0.392c2.172-0.986,5.397-1.671,8.668-1.665c3.529-0.006,7.09,0.789,9.604,2.49   c2.505,1.728,4.143,4.132,4.292,8.312c0.01,0.323,0.016,0.632,0.016,0.921C76.451,47.727,75.11,49.846,73.468,52.818z"
+                                                  fill="#046380" style="fill: rgb(4, 99, 128);"></path>
+                                            <path d="M38.943,18.924c-8.048,0-14.345-6.886-14.345-15.688c0,8.802-6.296,15.688-14.347,15.688   c8.051,0,14.347,6.884,14.347,15.689C24.599,25.808,30.896,18.924,38.943,18.924z" fill="#046380" style="fill: rgb(4, 99, 128);"></path>
+                                            <path d="M42.795,18.958c0-4.887,3.807-8.708,8.673-8.708c-4.866,0-8.673-3.822-8.673-8.707c0,4.885-3.805,8.707-8.672,8.707   C38.99,10.25,42.795,14.072,42.795,18.958z" fill="#046380" style="fill: rgb(4, 99, 128);"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="rd-navbar-nav-wrap">
+                            <!-- RD Navbar Nav-->
+                            {% if is_user_authenticate() %}
+                                <ul class="rd-navbar-nav">
+                                    <li class="rd-nav-item active"><a class="rd-nav-link" href="/">Home</a></li>
+                                    {#                            <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">About Us</a>#}
+                                    {#                            </li>#}
+                                    {#                            <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Typography</a>#}
+                                    {#                            </li>#}
+                                    {#                            <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">Contact Us</a>#}
+                                    {#                            </li>#}
+
+                                    {% if current_user.group=='admins' %}
+                                        <li class="rd-nav-item active"><a class="rd-nav-link" href="{{ url("meetings_calendar") }}">Календарь приема</a></li>
+                                    {% else %}
+                                        <li class="rd-nav-item active"><a class="rd-nav-link" href="{{ url("meetings_calendar") }}">Мои заявки</a></li>
+                                    {% endif %}
+                                    <li class="rd-nav-item active"><a class="rd-nav-link" href="/user">Профиль</a></li>
+
+                                </ul>
+                            {% endif %}
+                        </div>
+                        <div class="rd-navbar-element">
+{#                            <a class="button button-sm button-header button-winona" href="{{ url("login") }}">Войти</a>#}
+                            {% if not is_user_authenticate() %}
+                                <a class="button button-sm button-header button-winona" href="{{ url(constant("Akademiano\\UserEO\\UsersOpsRoutesStore::LOGIN_ROUTE")) }}">
+                                    Войти
+                                </a>
+                            {% else %}
+                                <a class="button button-sm button-header button-winona" href="{{ url(constant("Akademiano\\UserEO\\UsersOpsRoutesStore::LOGOUT_ROUTE")) }}">
+                                    Выйти
+                                </a>
+                            {% endif %}
+                        </div>
+                        <div class="rd-navbar-dummy"></div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        {% block main %}
+            {% block breadcrumb %}
+                <section class="breadcrumbs-custom">
+                    <div class="breadcrumbs-custom-main context-dark">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-xl-9">
+                                    <h3 class="breadcrumbs-custom-title">Some info...</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="breadcrumbs-custom-aside">
+                        <div class="container">
+                            <ul class="breadcrumbs-custom-path">
+                                <li><a href="/">Home</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            {% endblock breadcrumb %}
+
+            {% block mainContainer %}
+                <section class="section">
+                    <div class="container">
+                        {% block mainContainerContent %}
+                            <section class="section section-layout-1">
+                                <div class="section-layout-1-image" style="background-image: url(/assets/businet_free/images/bg-image-2.jpg);"></div>
+                                <div class="section-layout-1-inner">
+                                    <div class="section-layout-1-content container">
+                                        <div class="section-layout-1-header"><a class="brand" href="index.html"><img class="brand-logo-dark" src="/assets/businet_free/images/logo-default-148x34.webp" alt="" srcset="images/logo-default-297x63.png 2x" width="148" height="34"></a>
+                                        </div>
+                                        <div class="section-layout-1-main">
+                                            <h3>We're getting ready to launch in</h3>
+                                            <!-- Countdown-->
+                                            <div class="countdown countdown-modern is-countdown" data-type="until" data-time="31 May 2019 16:00" data-format="dhms"><span class="countdown-row countdown-show0"></span></div>
+                                            <p class="big">Our website is under construction, we are working very hard to give you the best experience on our new web site.</p>
+                                            <div class="offset-top-1">
+                                                <h3>Stay ready, we`re launching soon</h3>
+                                                <form class="rd-mailform rd-form form-inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php" novalidate="novalidate">
+                                                    <div class="form-wrap">
+                                                        <input class="form-input form-control-has-validation" id="subscribe-form-email" type="email" name="email" data-constraints="@Email @Required"><span class="form-validation"></span>
+                                                        <label class="form-label rd-input-label" for="subscribe-form-email">E-mail</label>
+                                                    </div>
+                                                    <div class="form-button">
+                                                        <button class="button button-shadow button-primary button-winona" type="submit"><div class="content-original">Subscribe</div><div class="content-dubbed">Subscribe</div></button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="section-layout-1-footer">
+                                            <p class="rights"><span>©&nbsp;</span><span class="copyright-year">2020</span><span>&nbsp;</span><span>Businet</span><span>.&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        {% endblock mainContainerContent %}
+                    </div>
+                </section>
+            {% endblock mainContainer %}
+
+        {% endblock main %}
+
+        <footer class="section footer-classic">
+            <div class="footer-classic-main">
+                <div class="container">
+                </div>
+            </div>
+            <div class="footer-classic-aside">
+                <div class="container">
+                    <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Businet</span>. All Rights Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a></p>
+                </div>
+            </div>
+        </footer>
+        {% endblock page %}
+    </div>
+
+    <div class="snackbars" id="form-output-global"></div>
+
+{#    {{ asset_js([#}
+{#        "jquery/dist/jquery.min.js",#}
+{#        "popper.js/dist/umd/popper.min.js",#}
+{#        "bootstrap/dist/js/bootstrap.min.js",#}
+{#        "bootstrap/dist/js/bootstrap.bundle.min.js",#}
+{#    ], default, true) }}#}
+
+    <script src="/assets/businet_free/js/core.min.js"></script>
+    <script src="/assets/businet_free/js/script.js"></script>
+
+{#        "bootstrap/dist/js/bootstrap.min.js",#}
+{#        "perfect-scrollbar/dist/perfect-scrollbar.min.js",#}
+{#        "coreui/dist/js/coreui.min.js",#}
+{#        "coreui/dist/js/coreui-utilities.min.js",#}
+
+{#        "font-awesome/js/fontawesome.min.js",#}
+{#        "font-awesome/js/solid.min.js",#}
+
+{#        "holder/holder.min.js",#}
+{#        "tether/dist/js/tether.min.js",#}
+{#        "pace/pace.min.js",#}
+{#        "chart.js/dist/Chart.min.js",#}
+{#    ], default, true) }}#}
+
+
+    {% block js %}
+    {% endblock js %}
+
+    </body>
+{% endblock body %}
+</html>
